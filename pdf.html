@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suject PDF </title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="pdf.css">
+</head>
+<body>
+    <header>
+        <h1>Subject PDFs </h1>
+    </header>
+
+    <section class="upload-section">
+        <h2>Upload New PDF</h2>
+        <input type="file" id="pdfFile" accept="application/pdf">
+        <input type="text" id="pdfTitle" placeholder="Enter PDF Title">
+        <button id="uploadButton">Upload PDF</button>
+    </section>
+
+    <section class="pdf-list">
+        <h2>Uploaded PDFs</h2>
+        <ul id="pdfList"></ul>
+    </section>
+
+    <!-- Footer with Social Icons -->
+    <footer>
+        <p>PDF Manager &copy; 2024 | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+    <script src="pdf.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') center/cover no-repeat fixed; /* Set your background image */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Header Styles with "Notice Board" and Nav Closer to the Top */
+.header {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), 
+                url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') center/cover no-repeat; */
+    color: #fff;
+    padding: 5px 0;  /* Reduced padding to bring content closer to the top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;  /* No margin at the top */
+}
+
+/* Align the Logo and Nav to the top */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;  /* No margin on the logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 0;  /* No extra space above the nav links */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the navigation links */
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Sticky Navbar when scrolling */
+.header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+/* Notice Board Section */
+.notice-board-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.notice-board-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.notice-board-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Notices Section */
+.notices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notice {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.notice h3 {
+    margin: 0 0 10px;
+    word-wrap: break-word; /* Prevents title from overflowing */
+}
+
+.notice-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Footer Styles */
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.save-btn, .close-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.close-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+/* Full Notice Modal Styles */
+#full-notice-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#full-notice-modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+#full-notice-modal h3 {
+    margin-top: 0;
+}
+
+#full-notice-modal p {
+    margin: 15px 0;
+}
+
+#close-full-notice-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

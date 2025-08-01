@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar nav a {
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar .search-input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    padding: 0 50px;
+}
+
+.content-left {
+    flex: 1;
+    max-width: 500px;
+}
+
+.content-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content-left p {
+    margin-bottom: 20px;
+}
+
+/* Login Form */
+.login-form {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 350px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #2b2b2b;
+    color: #fff;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Added spacing */
+    margin-bottom: 20px;
+}
+
+.options a {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background: #d9534f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #c9302c;
+}
+
+.login-form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-form p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Footer Social Media Icons */
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px; /* Increase spacing between icons */
+}
+
+.footer-icons a {
+    color: #fff;
+    font-size: 2rem; /* Increase the size of the icons */
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #d9534f;
+}
+
+/* Social Media Icons in Main Container */
+.social-icons {
+    display: flex;
+    gap: 20px; /* Increase spacing between icons */
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 2rem; /* Increase the size of the icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d9534f;
+}
+

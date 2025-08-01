@@ -1,0 +1,131 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') center/cover no-repeat fixed;
+    color: #333;
+}
+
+/* Glass Effect for Header and Footer */
+.header, .footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.5rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Main Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Flexbox for Section Containers */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Section hover effect */
+section {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+section:hover {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+section a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: none;
+}
+
+/* Footer Section */
+.footer {
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.footer .social-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #007bff;
+}

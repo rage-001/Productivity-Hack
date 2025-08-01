@@ -1,0 +1,160 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') center/cover no-repeat fixed; /* Background image */
+    margin: 0;
+    padding: 0;
+}
+
+/* Glass effect for header and footer */
+header, footer {
+    background: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-bottom: 20px; /* Ensure space between header and content */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Add task section */
+.add-task {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.add-task h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.add-task input, .add-task textarea {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.8); /* Lighter background for inputs */
+}
+
+.add-task textarea {
+    height: 100px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.add-task button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Space above button */
+}
+
+.add-task button:hover {
+    background-color: #003366;
+}
+
+/* Pending tasks section */
+.pending-tasks {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.pending-tasks h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.pending-tasks ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3); /* Slight glass effect on each task item */
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.task-info strong {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.task-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Buttons inside tasks */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 10px; /* Space between buttons */
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:nth-child(2) { background-color: #007bff; color: white; }
+button:nth-child(3) { background-color: #ffc107; color: black; }
+button:nth-child(4) { background-color: #28a745; color: white; }
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: white;
+    margin-top: 20px; /* Ensure space between content and footer */
+}

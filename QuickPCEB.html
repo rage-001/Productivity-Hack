@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Checklist</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .checklist li:hover {
+            background: #e1f5fe;
+            transform: scale(1.02);
+        }
+
+        .checklist input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            background: #ffffff;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            transition: background 0.3s;
+        }
+
+        .checklist input[type="checkbox"]:checked {
+            background: #007bff;
+        }
+
+        .checklist input[type="checkbox"]:checked::after {
+            content: '✓';
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            line-height: 0;
+        }
+
+        .checklist label {
+            font-size: 18px;
+            color: #333;
+            margin-left: 12px;
+            transition: color 0.3s;
+        }
+
+        .checklist input[type="checkbox"]:checked + label {
+            color: #007bff;
+            text-decoration: line-through;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; /* Centers the button horizontally */
+            margin-top: 20px; /* Adds space above the button */
+        }
+
+        .styled-button {
+            background: linear-gradient(135deg, #007bff, #00d2ff);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-decoration: none; /* Remove underline from link */
+            display: inline-block; /* Ensure the link behaves like a button */
+            text-align: center; /* Center text inside the link */
+        }
+
+        .styled-button:hover {
+            background: linear-gradient(135deg, #0056b3, #00aaff);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .styled-button:active {
+            background: linear-gradient(135deg, #004a8e, #0099cc);
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Material Checklist</h1>
+        <ul class="checklist">
+            <li><input type="checkbox" id="item1"> <label for="item1">Notebook</label></li>
+            <li><input type="checkbox" id="item2"> <label for="item2">Pen/Pencil</label></li>
+            <li><input type="checkbox" id="item3"> <label for="item3">Textbooks</label></li>
+            <li><input type="checkbox" id="item4"> <label for="item4">Notes</label></li>
+            <li><input type="checkbox" id="item5"> <label for="item5">Reference book</label></li>
+            <li><input type="checkbox" id="item6"> <label for="item6">Water bottle</label></li>
+        </ul>
+        <div class="button-container">
+            <a href="QuickBreathing.html" class="styled-button">Next</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* General body and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') center/cover no-repeat fixed;
+    color: #333;
+}
+
+/* Glass effect for header and footer */
+header, footer {
+    background: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+/* Glass effect for exam details and additional sections */
+.exam-details, .additional-sections > div {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Exam details table */
+.exam-details h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.3); /* Slightly transparent header background */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional Sections styling */
+.additional-sections > div {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Footer styling */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

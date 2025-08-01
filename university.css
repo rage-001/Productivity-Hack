@@ -1,0 +1,138 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure the body and html take up the full height */
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') center/cover no-repeat fixed; /* Set your background image path */
+    color: #333;
+}
+
+/* Glass Effect for Header and Footer */
+.header, .footer {
+    background: rgba(0, 0, 0, 0.6); /* Darker semi-transparent black background */
+    color: #fff;
+    padding: 0.5rem 0; /* Reduced padding for a smaller header */
+    border-radius: 15px; /* Rounded corners for glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 40px; /* Reduced height for the logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Reduced gap between nav links */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+
+/* Main Sections */
+.container {
+    max-width: 1200px; /* Set container width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside container */
+    flex: 1; /* Allow container to expand and push footer down */
+}
+
+/* Flexbox for Section Containers */
+.section-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 20px; /* Space between sections */
+    margin-bottom: 20px;
+}
+
+/* Section hover effect */
+section {
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default box-shadow */
+    flex: 1;
+    min-width: 300px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Indicate that the box is clickable */
+}
+
+section:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darken the background slightly */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase box-shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Ensure that links inside the section inherit the hover effect */
+section a {
+    color: inherit; /* Inherit color from section */
+    text-decoration: none; /* Remove underline */
+}
+
+section a:hover {
+    text-decoration: none; /* Keep no underline on hover */
+}
+
+
+/* Footer Section */
+.footer {
+    color: #fff;
+    padding: 10px 0; /* Reduced padding */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners for glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.8rem; /* Smaller font size */
+}
+
+.footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+    padding: 0;
+    margin: 5px 0;
+}
+
+.footer .social-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #007bff;
+}

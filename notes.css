@@ -1,0 +1,181 @@
+/* General body and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #dd7e31; /* Subtle light background */
+    background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Glass effect for header and footer */
+header, footer {
+    background: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Glass effect for upload and notes list sections */
+.upload-section, .notes-list {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    color: rgb(0, 0, 0);
+}
+
+/* Header styling inside sections */
+.upload-section h2, .notes-list h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* File input, text input, and button enhancements */
+input[type="file"], input[type="text"] {
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: calc(100% - 24px);
+    background: rgba(255, 255, 255, 0.6); /* Lighter background for inputs */
+    color: #333;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    background-color: #007bff; /* Default color */
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring for accessibility */
+}
+
+/* Specific button styles */
+.upload-section button {
+    background-color: #007bff; /* Primary color */
+}
+
+.upload-section button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+.notes-list button.view-btn {
+    background-color: #17a2b8; /* Teal color for view */
+}
+
+.notes-list button.view-btn:hover {
+    background-color: #138496; /* Darker teal for hover */
+}
+
+.notes-list button.download-btn {
+    background-color: #28a745; /* Green color for download */
+}
+
+.notes-list button.download-btn:hover {
+    background-color: #218838; /* Darker green for hover */
+}
+
+.notes-list button.edit-btn {
+    background-color: #ffc107; /* Yellow color for edit */
+}
+
+.notes-list button.edit-btn:hover {
+    background-color: #e0a800; /* Darker yellow for hover */
+}
+
+.notes-list button.delete-btn {
+    background-color: #dc3545; /* Red color for delete */
+}
+
+.notes-list button.delete-btn:hover {
+    background-color: #c82333; /* Darker red for hover */
+}
+
+/* Notes list styling */
+.notes-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notes-list li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3); /* Slight glass effect on each list item */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notes-list li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Footer styling */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Glass effect with black color */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Social Icons in footer */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffdd00;
+    transform: scale(1.2);
+}

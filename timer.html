@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ece9e6, #ffffff);
+            background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .timer-container {
+            text-align: center;
+            width: 500px; /* Increased width */
+            padding: 40px; /* Increased padding */
+            background: #f4f4f9;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 32px; /* Slightly increased font size */
+        }
+
+        #timerDisplay {
+            font-size: 60px; /* Increased font size for a clearer view */
+            color: #2c3e50;
+            font-family: 'Digital-7 Mono', monospace;
+            margin-bottom: 30px;
+        }
+
+        .timer-button {
+            padding: 14px 24px; /* Larger buttons */
+            margin: 8px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timer-button:active {
+            transform: scale(0.98);
+        }
+
+        #startButton {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        #startButton:hover {
+            background-color: #27ae60;
+        }
+
+        #stopButton {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        #stopButton:hover {
+            background-color: #c0392b;
+        }
+
+        #resetButton {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #resetButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Pomodoro Timer</h1>
+        <div id="timerDisplay">25:00</div>
+        <button id="startButton" class="timer-button">Start</button>
+        <button id="stopButton" class="timer-button">Stop</button>
+        <button id="resetButton" class="timer-button">Reset</button>
+    </div>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let isBreak = false;
+        let minutes = 25;
+        let seconds = 0;
+
+        function updateDisplay() {
+            const display = document.getElementById('timerDisplay');
+            const min = minutes < 10 ? '0' + minutes : minutes;
+            const sec = seconds < 10 ? '0' + seconds : seconds;
+            display.textContent = `${min}:${sec}`;
+        }
+
+        function startTimer() {
+            if (isRunning) return;
+            isRunning = true;
+            timer = setInterval(() => {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(timer);
+                        isRunning = false;
+                        if (isBreak) {
+                            minutes = 25;
+                            seconds = 0;
+                            isBreak = false;
+                        } else {
+                            minutes = 5;
+                            seconds = 0;
+                            isBreak = true;
+                        }
+                        updateDisplay();
+                        alert(isBreak ? 'Break time! 🍎' : 'Pomodoro completed! 🎉');
+                        return;
+                    } else {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+                updateDisplay();
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (isRunning) {
+                clearInterval(timer);
+                isRunning = false;
+            }
+        }
+
+        function resetTimer() {
+            if (isRunning) {
+                clearInterval(timer);
+                isRunning = false;
+            }
+            minutes = 25;
+            seconds = 0;
+            isBreak = false;
+            updateDisplay();
+        }
+
+        document.getElementById('startButton').addEventListener('click', startTimer);
+        document.getElementById('stopButton').addEventListener('click', stopTimer);
+        document.getElementById('resetButton').addEventListener('click', resetTimer);
+
+        updateDisplay(); // Initialize display
+    </script>
+</body>
+</html>

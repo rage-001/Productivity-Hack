@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .timer {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #007bff, #00d2ff);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #0056b3, #00aaff);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:active {
+            background: linear-gradient(135deg, #004a8e, #0099cc);
+            transform: scale(0.98);
+        }
+
+        .skip-button {
+            background: #ff5722;
+        }
+
+        .skip-button:hover {
+            background: #e64a19;
+        }
+
+        .skip-button:active {
+            background: #d84315;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Breathing Exercise</h1>
+        <div class="message" id="message">Get Ready!</div>
+        <div class="timer" id="timer">00:00</div>
+        <div class="button-container">
+            <button class="button skip-button" id="skipButton">Skip</button>
+            <button class="button" id="nextButton" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let step = 0;
+        let count = 0;
+        let intervalId;
+        const message = document.getElementById('message');
+        const timer = document.getElementById('timer');
+        const nextButton = document.getElementById('nextButton');
+        const skipButton = document.getElementById('skipButton');
+
+        const intervals = [
+            { phase: 'Breath In', duration: 8 },
+            { phase: 'Hold', duration: 10 },
+            { phase: 'Breath Out', duration: 8 },
+        ];
+
+        function updateTimer(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            timer.textContent = `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        function startBreathingExercise() {
+            nextButton.style.display = 'none';
+            skipButton.style.display = 'inline-block';
+            count = 0;
+            step = 0;
+            executePhase();
+        }
+
+        function executePhase() {
+            if (count < 3) {
+                const phase = intervals[step % intervals.length];
+                message.textContent = phase.phase;
+                let remainingTime = phase.duration;
+                intervalId = setInterval(() => {
+                    updateTimer(remainingTime);
+                    remainingTime--;
+                    if (remainingTime < 0) {
+                        clearInterval(intervalId);
+                        step++;
+                        if (step % intervals.length === 0) count++;
+                        if (count < 3) {
+                            setTimeout(executePhase, 1000);
+                        } else {
+                            message.textContent = 'Good Job!';
+                            timer.textContent = '00:00';
+                            nextButton.style.display = 'block';
+                            skipButton.style.display = 'none';
+                        }
+                    }
+                }, 1000);
+            }
+        }
+
+        nextButton.addEventListener('click', () => {
+            window.location.href = 'timer.html'; // Redirect to the new page
+        });
+
+        skipButton.addEventListener('click', () => {
+            clearInterval(intervalId); // Stop the current interval
+            message.textContent = 'Exercise Skipped!';
+            timer.textContent = '00:00';
+            nextButton.style.display = 'block';
+            skipButton.style.display = 'none';
+        });
+
+        startBreathingExercise();
+    </script>
+</body>
+</html>
+

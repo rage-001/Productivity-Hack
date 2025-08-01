@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="notice board.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- Header Section -->
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Notice Board</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <!-- Main Notice Board Section -->
+    <div class="container">
+        <section class="notice-board-section">
+            <h2>Manage Notices</h2>
+            <div class="notice-board-controls">
+                <button class="create-btn">Create New Notice</button>
+            </div>
+
+            <div class="notices" id="notices">
+                <!-- Notices will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for Creating/Editing Notices -->
+    <div id="notice-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Create Notice</h3>
+            <label for="notice-title">Title:</label>
+            <input type="text" id="notice-title" placeholder="Enter notice title" required>
+            <label for="notice-desc">Description:</label>
+            <textarea id="notice-desc" placeholder="Enter notice description" required></textarea>
+            <button id="save-btn" class="save-btn">Save</button>
+            <button id="close-btn" class="close-btn">Close</button>
+        </div>
+    </div>
+<!-- Modal for displaying the full notice -->
+<div id="full-notice-modal" class="modal">
+    <div class="modal-content">
+        <h3 id="full-notice-title">Notice Title</h3>
+        <p id="full-notice-desc">Notice description will be displayed here.</p>
+        <button id="close-full-notice-btn" class="close-btn">Close</button>
+    </div>
+</div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Notice Board. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="notice board.js"></script>
+</body>
+</html>

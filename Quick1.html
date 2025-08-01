@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            background: url('moon-evening-sky-mountains-forest-silhouette-3840x2160-402.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .subject-button {
+            background-color: #007BFF; /* Blue background */
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            margin: 0;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .subject-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-3px); /* Lift effect */
+        }
+        .subject-button:active {
+            background-color: #004494; /* Even darker blue when clicked */
+            transform: translateY(0); /* Reset lift effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="QuickPCEB.html" class="subject-button">Maths</a>
+        <a href="QuickPCEB.html" class="subject-button">Physics</a>
+        <a href="QuickPCEB.html" class="subject-button">Electricity</a>
+        <a href="QuickPCEB.html" class="subject-button">Graphing</a>
+        <a href="QuickPCEB.html" class="subject-button">Chemistry</a>
+        <a href="QuickPCEB.html" class="subject-button">English</a>
+        <a href="QuickPCEB.html" class="subject-button">Biology</a>
+        <a href="QuickPCEB.html" class="subject-button">Electronics</a>
+    </div>
+</body>
+</html>
